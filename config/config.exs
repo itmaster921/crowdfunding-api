@@ -17,10 +17,7 @@ config :crowdfunding_api, CrowdfundingApi.Endpoint,
   pubsub: [name: CrowdfundingApi.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
-# Configures Elixir's Logger
-config :logger, :console,
-  format: "$time $metadata[$level] $message\n",
-  metadata: [:request_id]
+
 
 config :guardian, Guardian,
   issuer: "CrowdfundingApi.#{Mix.env}",
